@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".makekit_activity.JoinActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:text="회원가입"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="40dp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="30dp"
+        android:layout_weight="10"
+        android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/InputLayoutName_join"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1.8"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name_join"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_background"
+                android:hint="이름"
+                android:paddingLeft="10dp"
+                android:textSize="18dp"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="2.5"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/InputLayoutEmail_join"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:errorEnabled="true"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email_join"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_background"
+                    android:hint="이메일"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:paddingLeft="10dp"
+                    android:textSize="18dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnEmailCheck_join"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:text="이메일 인증"
+                android:textColor="@color/white"
+                android:stateListAnimator="@null"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/InputLayoutPw_join"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1.8"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pw_join"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_background"
+                android:hint="비밀번호 (8자 이상)"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:textSize="18dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/InputLayoutPwCheck_join"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1.8"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pwCheck_join"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_background"
+                android:hint="비밀번호 확인"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:textSize="18dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_pwCheckMsg_join"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="0.6" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/InputLayoutAddress"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1.8"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_background"
+                android:hint="주소입력"
+                android:singleLine="true"
+                android:paddingLeft="10dp"
+                android:textSize="18dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/InputLayoutAddress_detail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1.8"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_address_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_background"
+                android:hint="상세주소입력"
+                android:singleLine="true"
+                android:paddingLeft="10dp"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/InputLayoutPhone_join"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="top"
+            android:layout_margin="10dp"
+            android:layout_weight="1.8"
+            app:errorEnabled="true"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone_join"
+                android:layout_width="237dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:hint="휴대폰"
+                android:inputType="phone"
+                android:maxLength="13"
+                android:paddingLeft="10dp"
+                android:textSize="18dp"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+<!--        <ScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="150dp">-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/terms_of_service"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:padding="50dp"-->
+<!--                android:text="MakeKit 약관 확인"/>-->
+
+
+
+<!--    </LinearLayout>-->
+<!--        </ScrollView>-->
+        </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <CheckBox
+            android:id="@+id/checkAgree_join"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="개인정보 수집 및 이용약관 동의" />
+
+        <TextView
+            android:id="@+id/terms_of_service"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:textColor="#3963FA"
+            android:textStyle="bold"
+            android:layout_marginRight="30dp"
+            android:gravity="right"
+            android:text="내용보기"/>
+
+<!--         <TextView-->
+<!--            android:id="@+id/terms_of_service"-->
+<!--             android:layout_marginLeft="35dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--             android:textColor="#3963FA"-->
+<!--             android:textStyle="bold"-->
+<!--            android:text=" MakeKit 이용 약관 내용 보기 "/>-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_gravity="center"
+        android:gravity="center">
+        <Button
+            android:id="@+id/submitBtn_join"
+            android:layout_width="120dp"
+            android:layout_height="46dp"
+            android:layout_gravity="center"
+            android:text="가입"
+            android:textColor="@color/white"
+            android:stateListAnimator="@null"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

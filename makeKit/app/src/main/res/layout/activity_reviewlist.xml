@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".makekit_activity.ReviewListActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="나의 구매 후기"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:background="@color/brown"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout_reviewList"
+        android:layout_alignParentBottom="true"
+        app:tabTextColor="@color/black"
+        app:tabSelectedTextColor="@color/brown"
+        app:tabGravity="fill"
+        app:tabIndicatorFullWidth="true"
+        app:tabIndicatorGravity="bottom"
+        app:tabIndicatorHeight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:id="@+id/linearlayout_reviewList"
+        >
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewpager_reviewList">
+        </androidx.viewpager.widget.ViewPager>
+
+    </LinearLayout>
+
+
+</LinearLayout>
